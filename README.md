@@ -10,6 +10,8 @@ Este proyecto es un microservicio RESTful implementado en Django que permite rea
 
 - **Recuperación de Todos los Elementos**: También se ha agregado un endpoint para obtener la lista completa de elementos almacenados en la base de datos.
 
+- **Eliminacion de los elementos**: Se ha agregado un endpoint para eliminar un elemento de la base de datos por su ID
+
 - **Documentacion mas detallada sobre los endpoints**: Se ha agregado un endpoint donde se detalla de una manera mas visual todos los endpoints disponibles y su requerimientos. Dicho endpoint seria: localhost:8000/docs
 
 ## Configuración del Proyecto
