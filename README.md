@@ -21,7 +21,7 @@ Para ejecutar este proyecto en tu máquina local, sigue estos pasos:
    ```bash
    git clone <URL_DEL_REPOSITORIO>
 
-pip install -r requirements.txt
-python manage.py makemigrations
-python manage.py migrate
+pip install -r requirements.txt -
+python manage.py makemigrations -
+python manage.py migrate -
 python manage.py runserver
