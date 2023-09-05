@@ -5,11 +5,12 @@ from myapp import views
 
 #Esto me genera automaticamente todas las urls para tasks, (GET - POST - PUT - DELETE)
 router = routers.DefaultRouter()
-router.register(r'fields', [views.get_data_view, views.input_view, views.get_all_data_view], 'fields')
+router.register(r'fields', [views.get_data_view, views.input_view, views.get_all_data_view, views.delete_field_by_id], 'fields')
 
 urlpatterns = [
     path('input/<str:my_target_field>/', views.input_view, name='input'),
     path('get_data/<int:id>/', views.get_data_view, name='get_data'),
     path('get_all_data/', views.get_all_data_view, name="get_all_data"),
+    path('delete/<int:id>/', views.delete_field_by_id, name="delete"),
     path('docs/', include_docs_urls(title = "Fields api"))
 ]

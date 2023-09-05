@@ -43,3 +43,17 @@ def get_all_data_view(request):
 
     serializer = FieldsSerializer(item,  many=True)
     return Response(serializer.data)
+
+@api_view(['DELETE'])
+def delete_field_by_id(request, id):
+    try:
+        item = Fields.objects.get(id=id)
+        item.delete()
+        response_data = {
+            "message": "El campo se ha eliminado correctamente",
+            "id": id  
+        }
+        serializer = FieldsSerializer(response_data) 
+    except Fields.DoesNotExist:
+        return Response({"error": "No se pudo eliminar"}, status=status.HTTP_404_NOT_FOUND)
+    return Response(response_data)
